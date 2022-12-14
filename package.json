@@ -1,0 +1,30 @@
+{
+  "name": "uswds-sandbox",
+  "private": true,
+  "author": "18F",
+  "license": "CC0-1.0",
+  "scripts": {
+    "federalist": "npm run uswds-copy-assets && npm run uswds-build-sass",
+    "jekyll-install": "gem install bundler && bundle install",
+    "serve": "bundle exec jekyll serve --livereload",
+    "start": "npm install && npm update uswds && npm run jekyll-install && npm run uswds-copy-assets && npm run uswds-copy-theme && npm run uswds-build-sass",
+    "uswds-build-sass": "gulp compileSass",
+    "uswds-copy-assets": "gulp copyAssets",
+    "uswds-copy-fonts": "gulp copyFonts",
+    "uswds-copy-img": "gulp copyImages",
+    "uswds-copy-js": "gulp copyJS",
+    "uswds-copy-theme": "gulp copyTheme",
+    "uswds-update": "npm update uswds",
+    "watch": "gulp watch",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "dependencies": {
+    "snyk": "^1.1071.0",
+    "uswds": "^2.13.3"
+  },
+  "snyk": true,
+  "devDependencies": {
+    "@uswds/compile": "^1.0.0-beta.3"
+  }
+}

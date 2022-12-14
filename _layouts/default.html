@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+{% include head.html %}
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TSRQBRG"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div class="paper">
+    {% include gov-banner.html %}
+    {% include header.html %}
+
+    {{ content }}
+
+    {% include component-footer.html %}
+    {% include component-anchor.html name="digitalgov" %}
+  </div>
+
+  <script
+  src="{{ site.baseurl }}/assets/js/jquery-3.6.0.min.js"
+  ></script>
+  <script src="{{ "/assets/uswds/js/uswds.min.js" | relative_url }}"></script>
+</body>
+</html>
